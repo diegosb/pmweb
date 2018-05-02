@@ -2,7 +2,7 @@
 
 .custom-overlay,
 .custom-modal {
-    background: $background-color;
+    background: $background-color !important;
 }
 
 .react-bs-table-bordered {
@@ -11,7 +11,7 @@
 
 .custom-modal {
     min-width: 60vw;
-    box-shadow: none;
+    box-shadow: none !important;
     h2 {
         font-size: 1.5em;
         font-weight: 400;
