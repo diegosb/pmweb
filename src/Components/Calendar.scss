@@ -1,0 +1,106 @@
+.calendar {
+    position: absolute;
+    right: 0;
+    padding: 1em;
+    > div {
+        position: relative;
+        > svg {
+            position: absolute;
+            top: 18px;
+            right: 30px;
+        }
+    }
+}
+
+.calendar:hover {
+    background: #1d1d1d;
+    .rdrMonthAndYearWrapper {
+        display: flex;
+    }
+    
+    .rdrMonth {
+        display: block;
+    }
+}
+
+.rdrCalendarWrapper {
+    z-index: 9999;
+}
+
+.rdrDateRangeWrapper,
+.rdrDateDisplayWrapper {
+    background: #1d1d1d;
+    width: 25em;
+    border-radius: 28px;
+}
+
+.rdrMonthAndYearWrapper {
+    display: none;
+}
+
+.rdrMonth {
+    display: none;
+}
+
+.rdrDateDisplay {
+    background: #242424;
+    border-radius: 28px;
+    .rdrDateDisplayItem {
+        border: none;
+        box-shadow: none;
+        background: transparent;
+        &:last-of-type {
+            margin-right: 4em;
+        }
+    }
+    input {
+        background: #242424;
+        border: none;
+        color: #f9f9f9;
+        font-size: 1.15em;
+        font-weight: 600;
+        outline: none;
+        box-shadow: none;
+        &:focus,
+        &:active {
+            background: #242424;
+        border: none;
+        font-size: 1em;
+        font-weight: 600;
+        outline: none;
+        box-shadow: none;
+        }
+    }
+}
+
+.rdrDays,
+.rdrDay,
+.rdrDay span,
+.rdrYearPicker select,
+.rdrMonthPicker select {
+    color: #f9f9f9;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.rdrYearPicker select,
+.rdrMonthPicker select {
+    color: #53B17F;
+    font-size: 1.15em;
+    padding: 10px;
+    text-align: center;
+}
+
+.rdrYearPicker select:hover,
+.rdrMonthPicker select:hover {
+    background: transparent;
+}
+
+.rdrMonth {
+    width: 95%;
+}
+
+.calendar--show > .rdrCalendarWrapper.rdrDateRangeWrapper {
+    display: none;
+}

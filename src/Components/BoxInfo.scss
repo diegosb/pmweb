@@ -1,0 +1,71 @@
+@import '../colors.scss';
+
+.box-info {
+    background: $box-color;
+    border-radius: 2%;
+    padding: 1em 2em;
+    transition: all 0.25s ease;
+    margin: .5em .25em;
+    &:hover {
+        transform: translateY(-1%)
+    }
+    &__header {
+        margin-bottom: 1em;
+        small {
+            color: $text-grey-dark;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+    }
+    &__progress {
+        padding-top: 1em;
+    }
+
+    &__details {
+        padding-left: 2em;
+        >div:first-of-type {
+            padding-bottom: 1em;
+        }
+    }
+    h2 {
+        font-size: 1.05em;
+    }
+    .details__inbound,
+    .details__outbound {
+        p {
+            font-size: 1.25em;
+            margin: 0 0 0.75em;
+        }
+        p:first-of-type {
+            color: $text-grey-dark;
+            font-size: 0.9em;
+            font-weight: 600;
+            margin-top: 1em;
+        }
+    }
+    .details__percentage {
+        display: inline-block;
+        padding: 0.5em 1.25em;
+        background: red;
+        border-radius: 20px;
+        font-size: 0.85em;
+        font-weight: 700;
+        svg {
+            margin-right: 0.5em;
+        }
+    }
+    .modal__btn {
+        text-align: center;
+        padding: 1em 0;
+        a {
+            color: $text-grey-dark;
+            text-decoration: none;
+            font-size: 0.9em;
+                font-weight: 600;
+        }
+        svg {
+            margin-left: 0.5em;
+            vertical-align: middle;
+        }
+    }
+}

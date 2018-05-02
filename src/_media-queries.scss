@@ -1,0 +1,71 @@
+// Media Queries
+$break-small: 760px;
+$break-large: 1240px;
+$break-xlarge: 1440px;
+$break-4k: 2560px;
+@mixin media($media) {
+    @if $media==phone {
+        @media only screen and (max-width: $break-small) {
+            @content;
+        }
+    }
+    @else if $media==tablet {
+        @media only screen and (min-width: $break-small + 1) {
+            @content;
+        }
+    }
+    @else if $media==desktop {
+        @media only screen and (min-width: $break-large) {
+            @content;
+        }
+    }
+    @else if $media==tv {
+        @media only screen and (min-width: $break-xlarge) {
+            @content;
+        }
+    }
+    @else if $media==4k {
+        @media only screen and (min-width: $break-4k) {
+            @content;
+        }
+    }
+}
+
+// Center Elements
+// Horizontal and Vertical Align - Parent element must be position: relative
+@mixin centerer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin centerer-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Horizontal Align - Block Element
+@mixin center-horizontal {
+    margin: 0 auto;
+}
+
+// Vertical Align - Parent element must be position: relative
+@mixin center-vertical {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@mixin center-vflex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@mixin header-fixed {
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+}

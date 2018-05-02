@@ -1,0 +1,151 @@
+@import '../colors.scss';
+@import '../_media-queries.scss';
+label,
+input {
+    display: block
+}
+.form-group span,
+label {
+    font-weight: 600;
+    font-size: 0.85em;
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+input,
+textarea {
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    color: $text-grey-dark;
+    font-size: 0.95em;
+    line-height: 2;
+    padding-left: 1em;
+    width: 95%;
+    &:hover,
+    &:focus,
+    &:active {
+        outline: none;
+        box-shadow: none;
+    }
+    @include media('desktop') {
+        width: 90%; 
+    }
+    &.error-field {
+        border-color: #E6543E;
+    }
+}
+
+input[type=file] {
+    display: none;
+}
+
+label[for=files] {
+    display: inline-block;
+    color: $primary-color;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+textarea {
+    min-height: 100px;
+    width: 95%;
+}
+
+.form-group {
+    margin-bottom: 1em;
+}
+
+.modal-contato {
+    min-height: 500px;
+    width: 80vw;
+    @include media('desktop') {
+        width: 40vw; 
+    }
+    button {
+        top: 26px;
+    }
+    svg {
+        fill: #f9f9f9;
+    }
+    header {
+        background: $primary-color;
+        margin: -1.2rem -1.2rem 2em;
+        padding: 2em 2em 0.25em;
+    }
+    h2 {
+        margin-top: 0;
+        font-weight: 400;
+        color: #f9f9f9;
+    }
+    .btn.btn-contact {
+        background: $primary-color;
+        border-color: $primary-color;
+        color: #f9f9f9;
+        margin: 1em 0;
+        &:hover {
+            background: darken($primary-color, 5%);
+            border-color: darken($primary-color, 5%);
+        }
+        &:focus,
+        &:active {
+            outline: none;
+        }
+    }
+}
+
+.modal__content form{
+    padding: 0 1em;
+}
+
+.form-group span.text-error {
+    font-size: 0.65em;
+    margin-left: 1em;
+    color: #E6543E;
+}
+
+// Files List
+
+.list-files {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    .files__item {
+        font-size: 0.85em;
+        color: #333;
+        margin-bottom: 0.5em;
+        a {
+            color: #E6543E;
+            margin-right: 0.5em;
+            font-weight: 700;
+            text-decoration: none;
+        }
+    }
+}
+
+// Modal Form enviado
+.modal-contato.form-enviado {
+    background: $primary-color;
+    position: relative;
+    .modal__contato-enviado {
+        width: 50%;
+        margin: 0 auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        h2 {
+            font-weight: 600;
+        }
+        p {
+            color: #f9f9f9;
+            font-size: 0.95em;
+            font-weight: 400;
+        }
+    }
+    .btn-contact.btn-return {
+        background: #f9f9f9;
+        color: $primary-color;
+    }
+}
+

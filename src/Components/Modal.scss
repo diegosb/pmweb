@@ -1,0 +1,25 @@
+@import '../colors.scss';
+
+.custom-overlay,
+.custom-modal {
+    background: $background-color;
+}
+
+.react-bs-table-bordered {
+    border: none;
+}
+
+.custom-modal {
+    min-width: 60vw;
+    box-shadow: none;
+    h2 {
+        font-size: 1.5em;
+        font-weight: 400;
+        margin-top: 0;
+        padding: 0 .25em;
+        color: #f9f9f9;
+    }
+    svg {
+        fill: #f9f9f9;
+    }
+}

@@ -1,0 +1,38 @@
+@import '../colors.scss';
+@keyframes donut-chart-fill {
+    to { stroke-dasharray: 0 100; }
+  }
+  
+  .svg-item {
+    width: 150px;
+    height: 150px;
+    font-size: 16px;
+  }
+  .donut-ring {
+    stroke: $background-color;
+  }
+  
+  .donut-segment {
+    animation: donut-chart-fill 1s reverse ease-in;
+    transform-origin: center;
+  }
+  
+  .donut-text {
+    font-family: "Gotham", sans-serif;
+    fill: #B4B4B4;
+  }
+  
+  .donut-label {
+    font-size: 0.28em;
+    font-weight: 700;
+    line-height: 1;
+    fill: #000;
+    transform: translateY(0.25em);    
+  }
+  
+  .donut-percent {
+    font-size: 5px;
+    fill: #F1F1F1;
+    line-height: 1;
+    transform: translateY(0.5em);
+  }

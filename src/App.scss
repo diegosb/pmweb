@@ -1,0 +1,61 @@
+@import './colors.scss';
+@import './_media-queries.scss';
+.App {
+  background-color: $background-color;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  color: $font-color-base;
+  .container > .row:last-of-type {
+    margin: 3em 0;
+  }
+}
+
+.App-header {
+  width: 100;
+  position: relative;
+}
+
+.breadcrumbs {
+  padding: 1em;
+  ol {
+    list-style: none;
+    padding: 0 8px;
+    li {
+      color: $text-grey-dark;
+      display: inline-block;
+      font-size: 0.9em;
+      svg {
+        padding: 0 .5em;
+      }
+    }
+    li:first-of-type {
+      display: none;
+      @include media('desktop') {
+        display: inline-block;
+      }
+    }
+    li:last-of-type {
+      font-size: 1.5em;
+      padding: 0 .25em;
+      color: #f9f9f9;
+    }
+  }
+}
+
+.btn-contact {
+  background: transparent;
+  box-shadow: none;
+  border: 1px solid $text-grey-dark;
+  border-radius: 15px;
+  color: $text-grey-dark;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 2;
+  width: 100%;
+}
+

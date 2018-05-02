@@ -1,0 +1,66 @@
+@import '../colors.scss';
+@import '../_media-queries.scss';
+$graph-purple: rgb(103, 68, 177);
+$graph-blue: rgba(75,192,192,1);
+.chartdata {
+    background: $box-color;
+    border-radius: 10px;
+    width: 84%;
+    padding: 1em 2em;
+    min-height: 300px;
+    margin-bottom: 1em;
+    @include media('desktop') {
+        width: 94.5%;
+    }
+    h2 {
+        font-size: 1.05em;
+        display: inline-block;
+        margin-right: 2em;
+    }
+    small {
+        display: block;
+        color: #878787;
+        font-size: 0.9em;
+        font-weight: 600;
+        @include media('desktop') {
+            display: inline-block;
+        }
+    }
+
+}
+
+.chartdata__legenda {
+    display: inline-block;
+    float: right;
+    .legenda__item {
+        display: inline-block;
+        margin-left: 2em;
+        @include media('desktop') {
+            margin-left: 3em;
+        }
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 18px;
+            vertical-align: middle;
+            height: 4px;
+            background-color: $graph-blue;
+            margin-right: 0.5em;
+        }
+    }
+    .legenda__item:first-of-type::before {
+        background-color: $text-grey-dark;
+    }
+    .legenda__item:last-of-type::before {
+        background-color: $graph-purple;
+    }
+}
+
+.chartdata__grafico {
+    canvas {
+        height: 206px; 
+        @include media('desktop') {
+            height: 588px; 
+        }
+    }
+}

@@ -1,0 +1,89 @@
+@import '../colors.scss';
+.loader {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	z-index: 9999;
+	&--content {
+		background-color: rgba(255, 255, 255, 0.7);
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	&.full-screen {
+		background-color: rgba(0, 0, 0, 0.65);
+		position: fixed;
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+		left: 0;
+		pointer-events: none;
+	}
+}
+
+.loader__portal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	> .icon-double-bounce {
+		position: relative;
+		margin: 0 auto;
+		width: 60px;
+		height: 60px;
+	}
+	&.loader--big {
+		> .icon-double-bounce {
+			width: 140px;
+			height: 140px;
+		}
+	}
+}
+
+.icon-double-bounce {
+	top: 20px;
+}
+
+.icon-double-bounce1,
+.icon-double-bounce2 {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-color: $primary-color;
+	opacity: 0.6;
+	position: absolute;
+	top: 0;
+	left: 0;
+	-webkit-animation: icon-doubleBounce 2s infinite ease-in-out;
+	animation: icon-doubleBounce 2s infinite ease-in-out;
+}
+
+.icon-double-bounce2 {
+	-webkit-animation-delay: -1s;
+	animation-delay: -1s;
+}
+
+@-webkit-keyframes icon-doubleBounce {
+	0%,
+	100% {
+		-webkit-transform: scale(0);
+		transform: scale(0);
+	}
+	50% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+
+@keyframes icon-doubleBounce {
+	0%,
+	100% {
+		-webkit-transform: scale(0);
+		transform: scale(0);
+	}
+	50% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
